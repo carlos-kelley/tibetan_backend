@@ -3,12 +3,13 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CharacterController;
+use App\Http\Controllers\VowelController;
 
 Route::get('/characters', [CharacterController::class, 'index']);
-// Route::post('/characters', [CharacterController::class, 'store']);
 Route::get('/characters/{id}', [CharacterController::class, 'show']);
-// Route::put('/characters/{id}', [CharacterController::class, 'update']);
-// Route::delete('/characters/{id}', [CharacterController::class, 'destroy']);
+
+Route::get('/vowels', [VowelController::class, 'index']);
+Route::get('/vowels/{id}', [VowelController::class, 'show']);
 
 /*
 |--------------------------------------------------------------------------
