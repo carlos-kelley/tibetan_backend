@@ -32,19 +32,19 @@ class CharacterController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
-    {
-        $character = Character::create([
-            'tibetan' => $request->tibetan,
-            'english' => $request->english,
-        ]);
+    // public function store(Request $request)
+    // {
+    //     $character = Character::create([
+    //         'tibetan' => $request->tibetan,
+    //         'english' => $request->english,
+    //     ]);
 
 
-    return response()->json([
-        'success' => true,
-        'data' => $character,
-    ]);
-    }
+    // return response()->json([
+    //     'success' => true,
+    //     'data' => $character,
+    // ]);
+    // }
 
     /**
      * Display the specified resource.
@@ -77,48 +77,48 @@ class CharacterController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
-    {
-        $character = Character::find($id);
+    // public function update(Request $request, string $id)
+    // {
+    //     $character = Character::find($id);
 
-        if (!$character) {
-            return response()->json([
-                'success' => false,
-                'message' => 'Character not found',
-            ], 404);
-        }
+    //     if (!$character) {
+    //         return response()->json([
+    //             'success' => false,
+    //             'message' => 'Character not found',
+    //         ], 404);
+    //     }
 
-        $character->update([
-            'tibetan' => $request->tibetan,
-            'english' => $request->english,
-        ]);
+    //     $character->update([
+    //         'tibetan' => $request->tibetan,
+    //         'english' => $request->english,
+    //     ]);
 
-        return response()->json([
-                'success' => true,
-                'data' => $character,
-        ]);
-        }
+    //     return response()->json([
+    //             'success' => true,
+    //             'data' => $character,
+    //     ]);
+    //     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        $character = Character::find($id);
+    // /**
+    //  * Remove the specified resource from storage.
+    //  */
+    // public function destroy(string $id)
+    // {
+    //     $character = Character::find($id);
 
-        if (!$character) {
-            return response()->json([
-                'success' => false,
-                'message' => 'Character not found',
-            ], 404);
-        }
+    //     if (!$character) {
+    //         return response()->json([
+    //             'success' => false,
+    //             'message' => 'Character not found',
+    //         ], 404);
+    //     }
 
-        $character->delete();
+    //     $character->delete();
 
-        return response()->json([
-            'success' => true,
-            'message' => 'Character deleted successfully',
-        ]);
-    }
+    //     return response()->json([
+    //         'success' => true,
+    //         'message' => 'Character deleted successfully',
+    //     ]);
+    // }
 }
 

@@ -5,10 +5,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CharacterController;
 
 Route::get('/characters', [CharacterController::class, 'index']);
-Route::post('/characters', [CharacterController::class, 'store']);
+// Route::post('/characters', [CharacterController::class, 'store']);
 Route::get('/characters/{id}', [CharacterController::class, 'show']);
-Route::put('/characters/{id}', [CharacterController::class, 'update']);
-Route::delete('/characters/{id}', [CharacterController::class, 'destroy']);
+// Route::put('/characters/{id}', [CharacterController::class, 'update']);
+// Route::delete('/characters/{id}', [CharacterController::class, 'destroy']);
 
 /*
 |--------------------------------------------------------------------------
